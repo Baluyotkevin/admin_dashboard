@@ -16,6 +16,7 @@ import { authProvider, dataProvider, liveProvider } from "./providers";
 import { Login } from "./pages/login";
 import { ForgotPassword, Home, Register } from "./pages";
 import Layout from "./components/layout";
+import { resources } from "./config/resources";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
                 notificationProvider={useNotificationProvider}
                 routerProvider={routerBindings}
                 authProvider={authProvider}
+                resources={resources}
                 options={{
                   syncWithLocation: true,
                   warnWhenUnsavedChanges: true,
@@ -39,10 +41,9 @@ function App() {
                 }}
               >
                 <Routes>
-                  {/* <Route index element={<WelcomePage />} /> */}
-                  {/* <Route path="/register" element={<Register />} /> */}
+                  <Route path="/register" element={<Register />} />
                   <Route path="/login" element={<Login />} />
-                  {/* <Route path="/forgot-password" element={<ForgotPassword />} /> */}
+                  <Route path="/forgot-password" element={<ForgotPassword />} />
                   <Route
                     element={
                     <Authenticated 
