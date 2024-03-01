@@ -40,9 +40,9 @@ function App() {
               >
                 <Routes>
                   {/* <Route index element={<WelcomePage />} /> */}
-                  <Route path="/register" element={<Register />} />
+                  {/* <Route path="/register" element={<Register />} /> */}
                   <Route path="/login" element={<Login />} />
-                  <Route path="/forgot-password" element={<ForgotPassword />} />
+                  {/* <Route path="/forgot-password" element={<ForgotPassword />} /> */}
                   <Route
                     element={
                     <Authenticated 
