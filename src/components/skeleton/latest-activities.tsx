@@ -1,15 +1,24 @@
-import { Badge, List, Skeleton } from "antd";
+import { List, Skeleton } from "antd";
 
-const UpcomingEventsSkeleton = () => {
+const LatestActivitiesSkeleton = () => {
   return (
     <List.Item>
       <List.Item.Meta
-        avatar={<Badge color="transparent" />}
+        avatar={
+          <Skeleton.Avatar
+            active
+            size={48}
+            shape="square"
+            style={{
+              borderRadius: "4px",
+            }}
+          />
+        }
         title={
           <Skeleton.Button
             active
             style={{
-              height: "14px",
+              height: "16px",
             }}
           />
         }
@@ -18,7 +27,6 @@ const UpcomingEventsSkeleton = () => {
             active
             style={{
               width: "300px",
-              marginTop: "8px",
               height: "16px",
             }}
           />
@@ -28,4 +36,4 @@ const UpcomingEventsSkeleton = () => {
   );
 };
 
-export default UpcomingEventsSkeleton;
+export default LatestActivitiesSkeleton;
