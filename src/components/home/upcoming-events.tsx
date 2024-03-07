@@ -8,7 +8,7 @@ import { useList } from '@refinedev/core'
 import { DASHBORAD_CALENDAR_UPCOMING_EVENTS_QUERY } from '@/graphql/queries'
 
 const UpcomingEvents = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const { data, isLoading: eventsLoading } = useList({
     resource: 'events',
     pagination: { pageSize: 5},
