@@ -10,9 +10,15 @@ const CustomAvatar = ({ name, style, ...rest}: Props) => {
     <AntdAvatar
         alt={name}
         size="small"
-        style={{ backgroundColor: "#87068", display: "flex", alignItems: "center", border: "none", ...style}}
+        style={{ 
+          backgroundColor: "#87068", 
+          display: "flex", 
+          alignItems: "center", 
+          border: "none", 
+          ...style
+          }}
+          // {...rest}
     >
-        {name}
         {getNameInitials(name || '')}
     </AntdAvatar>
   )

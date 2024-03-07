@@ -8,8 +8,8 @@ import { SettingOutlined } from '@ant-design/icons'
 import { AccountSettings } from './account-settings'
 
 const CurrentUser = () => {
-    const { data: user } = useGetIdentity<User>()
     const [isOpen, setIsOpen] = useState(false)
+    const { data: user } = useGetIdentity<User>()
     const content = (
       <div style={{
         display: 'flex',
@@ -21,7 +21,7 @@ const CurrentUser = () => {
         >
           {user?.name}
         </Text>
-        <div style={{ borderTop: '1px solid #d9d9d9', padding: '4px', display: 'flex', flexDirection: 'column', gap: '4px'}}>
+        <div>
           <Button
             style={{ textAlign: 'left'}}
             icon={<SettingOutlined />}
@@ -29,7 +29,7 @@ const CurrentUser = () => {
             block
             onClick={() => setIsOpen(true)}
           >
-            AccountSettings
+          Account Settings
           </Button>
         </div>
       </div>
@@ -41,7 +41,7 @@ const CurrentUser = () => {
             placement="bottomRight"
             trigger="click"
             overlayInnerStyle={{padding: 0}}
-            overlayStyle={{zIndex: 999}}
+            overlayStyle={{ zIndex: 999 }}
             content={content}
         >
             <CustomAvatar 
